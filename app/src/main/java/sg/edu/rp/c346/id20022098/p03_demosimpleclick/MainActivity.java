@@ -7,12 +7,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
     TextView tvDisplay;
     Button buttonDisplay;
     EditText editInput;
+    ToggleButton toggleButtonEnabled;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         tvDisplay =findViewById(R.id.textViewDisplay);
         buttonDisplay =findViewById(R.id.buttonDisplay);
         editInput =findViewById(R.id.editTextInput);
+        toggleButtonEnabled =findViewById(R.id.toggleButton);
 
         System.out.println("test onCreate");
 
@@ -31,6 +34,18 @@ public class MainActivity extends AppCompatActivity {
 
                 String strResponse = editInput.getText().toString();
                 tvDisplay.setText(strResponse);
+            }
+        });
+
+        toggleButtonEnabled.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(toggleButtonEnabled.isChecked()){
+                    editInput.setEnabled(true);
+                }
+                else{
+                    editInput.setEnabled(false);
+                }
             }
         });
     }
