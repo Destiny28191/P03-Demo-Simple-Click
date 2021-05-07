@@ -3,7 +3,7 @@
     <string name="buttonDisplay">Display</string>
     <string name="enterSomething">Enter something</string>
     <string name="textViewDisplay">Display what the user enters</string>
-    <string name="togglebutton">ToggleButton</string>
+    <string name="toggleButtonEnabled">ToggleButton</string>
     <string name="disabled">Disabled</string>
     <string name="enabled">Enabled</string>
 </resources>
